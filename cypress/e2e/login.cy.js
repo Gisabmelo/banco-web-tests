@@ -1,7 +1,12 @@
 describe ('Login', () => {
-  it('Login com dados validos deve permitir entrada no sistema', () => {
+  beforeEach(() => {
     //arrange
     cy.visit('http://localhost:4000/')
+   
+  })
+  it('Login com dados validos deve permitir entrada no sistema', () => {
+
+    
 
     //action
     cy.get('#username').click().type('julio.lima')
@@ -15,8 +20,6 @@ describe ('Login', () => {
 
 
  it('Login com dados invalidos deve permitir entrada no sistema', () => {
-    //arrange
-    cy.visit('http://localhost:4000/')
 
     //action
     cy.get('#username').click().type('julio.lima')
